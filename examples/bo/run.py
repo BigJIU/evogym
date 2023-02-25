@@ -22,7 +22,8 @@ sys.path.insert(1, os.path.join(external_dir, 'pytorch_a2c_ppo_acktr_gail'))
 
 import evogym.envs
 from evogym import is_connected, has_actuator, get_full_connectivity
-from utils.algo_utils import TerminationCondition
+sys.path.append('./utils')
+from algo_utils import TerminationCondition
 from ppo import run_ppo
 
 def get_robot_from_genome(genome, config):

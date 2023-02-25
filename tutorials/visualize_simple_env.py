@@ -14,7 +14,7 @@ if __name__ == '__main__':
     env.reset()
 
     # step the environment for 500 iterations
-    for i in range(500):
+    for i in range(5000):
 
         action = env.action_space.sample()
         ob, reward, done, info = env.step(action)

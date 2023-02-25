@@ -1,4 +1,7 @@
 import os, sys
+
+from examples.utils.algo_utils import pretty_print
+
 root_dir = os.path.dirname(os.path.abspath(__file__))
 external_dir = os.path.join(root_dir, 'externals')
 sys.path.insert(0, root_dir)
@@ -7,16 +10,12 @@ sys.path.insert(1, os.path.join(external_dir, 'pytorch_a2c_ppo_acktr_gail'))
 
 import json
 import argparse
-import sys
 import numpy as np
 import torch
-import gym
 
-from utils.algo_utils import *
 from ppo.envs import make_vec_envs
 from ppo.utils import get_vec_normalize
 
-import evogym.envs
 
 def visualize_codesign(args, exp_name):
     global EXPERIMENT_PARENT_DIR

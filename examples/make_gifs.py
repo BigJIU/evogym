@@ -1,8 +1,6 @@
 
 import numpy as np
 import torch
-import gym
-from PIL import Image
 import imageio
 from pygifsicle import optimize
 
@@ -12,10 +10,9 @@ external_dir = os.path.join(root_dir, 'externals')
 sys.path.insert(0, root_dir)
 sys.path.insert(1, os.path.join(external_dir, 'pytorch_a2c_ppo_acktr_gail'))
 
-from utils.algo_utils import *
 from ppo.envs import make_vec_envs
 from ppo.utils import get_vec_normalize
-import utils.mp_group as mp
+
 
 def get_generations(load_dir, exp_name):
     gen_list = os.listdir(os.path.join(load_dir, exp_name))
